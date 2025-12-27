@@ -1,23 +1,23 @@
 # Markdown
 
-Ce document regroupe les fonctionnalités principales du Markdown (GitHub Flavored Markdown).
-Chaque fonctionnalité suit le même principe :
+Ce document regroupe les fonctionnalités principales du Markdown. Chaque fonctionnalité suit le même principe :
+
 - Son nom
 - Sa syntaxe
 - Et son résultat
-
----
 
 ## Titres
 
 Syntaxe :
 
-    # Titre niveau 1
-    ## Titre niveau 2
-    ### Titre niveau 3
-    #### Titre niveau 4
-    ##### Titre niveau 5
-    ###### Titre niveau 6
+```markdown
+# Titre niveau 1
+## Titre niveau 2
+### Titre niveau 3
+#### Titre niveau 4
+##### Titre niveau 5
+###### Titre niveau 6
+```
 
 Résultat :
 
@@ -28,19 +28,17 @@ Résultat :
 ##### Titre niveau 5
 ###### Titre niveau 6
 
----
-
 ## Commentaires / Citations
 
 Syntaxe :
 
-    > Mon commentaire
+```markdown
+> Mon commentaire
+```
 
 Résultat :
 
 > Mon commentaire
-
----
 
 ## Mise en forme du texte
 
@@ -48,8 +46,10 @@ Résultat :
 
 Syntaxe :
 
-    **Texte en gras**
-    __Texte en gras__
+```markdown
+**Texte en gras**
+__Texte en gras__
+```
 
 Résultat :
 
@@ -60,8 +60,10 @@ __Texte en gras__
 
 Syntaxe :
 
-    *Texte en italique*
-    _Texte en italique_
+```markdown
+*Texte en italique*
+_Texte en italique_
+```
 
 Résultat :
 
@@ -72,7 +74,9 @@ _Texte en italique_
 
 Syntaxe :
 
-    ***Texte important***
+```markdown
+***Texte important***
+```
 
 Résultat :
 
@@ -82,13 +86,13 @@ Résultat :
 
 Syntaxe :
 
-    ~~Texte barré~~
+```markdown
+~~Texte barré~~
+```
 
 Résultat :
 
 ~~Texte barré~~
-
----
 
 ## Liens
 
@@ -96,7 +100,9 @@ Résultat :
 
 Syntaxe :
 
-    [My Link](https://github.com/)
+```markdown
+[My Link](https://github.com/)
+```
 
 Résultat :
 
@@ -106,19 +112,20 @@ Résultat :
 
 Syntaxe :
 
-    [Markdown]
+```markdown
+// Pour appeler le lien dans le fichier
+[Markdown]
 
-Déclaration du lien (en bas de fichier) :
-
-    [Markdown]: https://guides.github.com/features/mastering-markdown/
+// Pour déclarer le lien (généralement en bas du fichier)
+// Automatiquement caché
+[Markdown]: <https://guides.github.com/features/mastering-markdown/>
+```
 
 Résultat :
 
 [Markdown]
 
-> Utile pour alléger le contenu du document
-
----
+> Utile pour alléger la lecture du code.
 
 ## Images
 
@@ -126,26 +133,26 @@ Résultat :
 
 Syntaxe :
 
-    [![Nom du lien](Lien_de_l_image)](Lien_de_redirection)
+```markdown
+[![Nom du lien](Lien_de_l_image)](Lien_de_redirection)
+```
 
 Résultat :
 
 [![Home](https://image4.owler.com/logo/web-savvy-marketing_owler_20160228_232231_large.png)](https://github.com/)
 
----
-
 ### Vidéo YouTube via image
 
 Syntaxe :
 
-    [![Nom](http://img.youtube.com/vi/ID_VIDEO/0.jpg)]
-    (https://www.youtube.com/watch?v=ID_VIDEO "Titre")
+```markdown
+[![Nom](http://img.youtube.com/vi/ID_VIDEO/0.jpg)]
+(https://www.youtube.com/watch?v=ID_VIDEO "Titre")
+```
 
 Résultat :
 
 [![](http://img.youtube.com/vi/o77MzDQT1cg/0.jpg)](https://www.youtube.com/watch?v=o77MzDQT1cg "Super vidéo de Hytale")
-
----
 
 ## Listes
 
@@ -153,10 +160,12 @@ Résultat :
 
 Syntaxe :
 
-    - Item 1
-      - Item 1.1
-        - Item 1.1.1
-    - Item 2
+```markdown
+- Item 1
+  - Item 1.1
+    - Item 1.1.1
+- Item 2
+```
 
 Résultat :
 
@@ -167,15 +176,15 @@ Résultat :
 
 > Deux espaces sont nécessaires pour chaque sous-niveau
 
----
-
 ### Liste ordonnée
 
 Syntaxe :
 
-    1. Premier
-    2. Deuxième
-    3. Troisième
+```markdown
+1. Premier
+2. Deuxième
+3. Troisième
+```
 
 Résultat :
 
@@ -183,21 +192,19 @@ Résultat :
 2. Deuxième
 3. Troisième
 
----
-
 ### Liste de tâches
 
 Syntaxe :
 
-    - [x] Tâche terminée
-    - [ ] Tâche à faire
+```markdown
+- [x] Tâche terminée
+- [ ] Tâche à faire
+```
 
 Résultat :
 
 - [x] Tâche terminée
 - [ ] Tâche à faire
-
----
 
 ## Code
 
@@ -205,39 +212,45 @@ Résultat :
 
 Syntaxe :
 
-    Voici du `code inline`
+```markdown
+Voici du `code inline`
+```
 
 Résultat :
 
 Voici du `code inline`
 
----
-
 ### Bloc de code
 
 Syntaxe :
 
-        function hello() {
-          console.log("Hello World");
-        }
+````markdown
+```js
+function hello() {
+  console.log("Hello World");
+}
+```
+````
 
 Résultat :
 
-    function hello() {
-      console.log("Hello World");
-    }
-
----
+```js
+function hello() {
+  console.log("Hello World");
+}
+```
 
 ## Spoiler / Contenu repliable
 
 Syntaxe :
 
-    <details>
-      <summary>Titre</summary>
+```markdown
+<details>
+  <summary>Titre</summary>
 
-      Contenu caché
-    </details>
+  Contenu caché
+</details>
+```
 
 Résultat :
 
@@ -247,16 +260,16 @@ Résultat :
   Contenu caché
 </details>
 
----
-
 ## Tableaux
 
 Syntaxe :
 
-    | Nom  | Valeur  |
-    | ---- | ------- |
-    | Nom1 | Valeur1 |
-    | Nom2 | Valeur2 |
+```markdown
+| Nom  | Valeur  |
+| ---- | ------- |
+| Nom1 | Valeur1 |
+| Nom2 | Valeur2 |
+```
 
 Résultat :
 
@@ -265,17 +278,15 @@ Résultat :
 | Nom1 | Valeur1 |
 | Nom2 | Valeur2 |
 
----
-
 ## Ligne de séparation
 
 Syntaxe :
 
-    ---
+```markdown
+---
+```
 
 Résultat :
-
----
 
 ---
 
@@ -283,33 +294,36 @@ Résultat :
 
 Syntaxe :
 
-    \*Texte non interprété\*
+```markdown
+\*Texte non interprété\*
+```
 
 Résultat :
 
 \*Texte non interprété\*
 
----
-
 ## HTML dans Markdown
 
 Syntaxe :
 
-    <p style="color:red;">Texte rouge</p>
+```markdown
+<p style="color:red;">Texte rouge</p>
+```
 
 Résultat :
 
 <p style="color:red;">Texte rouge</p>
 
----
-
 ## Notes de bas de page
 
 Syntaxe :
 
-    Texte avec une note[^1]
+```mardown
+Texte avec une note[^1]
 
-    [^1]: Contenu de la note
+// Elle va apparaitre à la fin du fichier
+[^1]: Contenu de la note
+```
 
 Résultat :
 
@@ -317,11 +331,8 @@ Texte avec une note[^1]
 
 [^1]: Contenu de la note
 
----
-
 ## Liens de référence
+> Les liens suivants sont bien invisibles !
 
-    [Markdown]: https://guides.github.com/features/mastering-markdown/
-    [embed youtube]: http://embedyoutube.org/
-
----
+[Markdown]: <https://guides.github.com/features/mastering-markdown/>
+[embed youtube]: <http://embedyoutube.org/>

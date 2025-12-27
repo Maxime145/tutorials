@@ -1,62 +1,162 @@
-# Markdown tutorial
+# Markdown
 
-## Commentaires
+Ce document regroupe les fonctionnalités principales du Markdown (GitHub Flavored Markdown).
+Chaque fonctionnalité suit le même principe :
+- Son nom
+- Sa syntaxe
+- Et son résultat
 
-Pour faire un bloc (de commentaire ou de citation) vous devez écrire : `> Mon commentaire`
+---
+
+## Titres
+
+Syntaxe :
+
+    # Titre niveau 1
+    ## Titre niveau 2
+    ### Titre niveau 3
+    #### Titre niveau 4
+    ##### Titre niveau 5
+    ###### Titre niveau 6
+
+Résultat :
+
+# Titre niveau 1
+## Titre niveau 2
+### Titre niveau 3
+#### Titre niveau 4
+##### Titre niveau 5
+###### Titre niveau 6
+
+---
+
+## Commentaires / Citations
+
+Syntaxe :
+
+    > Mon commentaire
+
+Résultat :
 
 > Mon commentaire
 
-## Liens
+---
 
-### Texte
+## Mise en forme du texte
 
-##### Solution 1
-
-- `[My Link](https://github.com/)`
--  Résultat : [My Link](https://github.com/)
-
-##### Solution 2
-
-- Déclarer le lien : `[Markdown]: <https://guides.github.com/features/mastering-markdown/>`
-- Appelez le lien `[Markdown]`
-- Résultat : [Markdown]
-> Pratique pour éviter d'alourdir la lecture du code
-
-### Images
-
-##### Fixe ou Gif
-
-- `[![Nom du lien](Lien de votre image)](Lien vers lequel rediriger en cas de clique sur l'image)`
--  Résultat : [![Home](https://image4.owler.com/logo/web-savvy-marketing_owler_20160228_232231_large.png)](https://github.com/)
-> Si votre image est sur votre ordinateur vous pouvez simplement glisser/déposer votre image, un lien va se créer directement.
-
-##### Youtube
+### Gras
 
 Syntaxe :
-> `[![Nom de l'image](Lien de l'image youtube)](Lien de la vidéo "Nom de la vidéo")`
 
-Exemple :
->`[![](http://img.youtube.com/vi/`__*ID OF VIDEO*__`/0.jpg)](https://www.youtube.com/watch?v=`__*ID OF VIDEO*__`"Un nom customisé")`
+    **Texte en gras**
+    __Texte en gras__
 
 Résultat :
-[![](http://img.youtube.com/vi/o77MzDQT1cg/0.jpg)](http://www.youtube.com/watch?v=o77MzDQT1cg "Super vidéo de Hytale")
 
-Si vous le souhaitez, vous pouvez convertir facilement le lien youtube en image grâce à [embed youtube] 
+**Texte en gras**  
+__Texte en gras__
+
+### Italique
+
+Syntaxe :
+
+    *Texte en italique*
+    _Texte en italique_
+
+Résultat :
+
+*Texte en italique*  
+_Texte en italique_
+
+### Gras et italique
+
+Syntaxe :
+
+    ***Texte important***
+
+Résultat :
+
+***Texte important***
+
+### Texte barré
+
+Syntaxe :
+
+    ~~Texte barré~~
+
+Résultat :
+
+~~Texte barré~~
+
+---
+
+## Liens
+
+### Lien simple
+
+Syntaxe :
+
+    [My Link](https://github.com/)
+
+Résultat :
+
+[My Link](https://github.com/)
+
+### Lien référencé
+
+Syntaxe :
+
+    [Markdown]
+
+Déclaration du lien (en bas de fichier) :
+
+    [Markdown]: https://guides.github.com/features/mastering-markdown/
+
+Résultat :
+
+[Markdown]
+
+> Utile pour alléger le contenu du document
+
+---
+
+## Images
+
+### Image fixe ou GIF
+
+Syntaxe :
+
+    [![Nom du lien](Lien_de_l_image)](Lien_de_redirection)
+
+Résultat :
+
+[![Home](https://image4.owler.com/logo/web-savvy-marketing_owler_20160228_232231_large.png)](https://github.com/)
+
+---
+
+### Vidéo YouTube via image
+
+Syntaxe :
+
+    [![Nom](http://img.youtube.com/vi/ID_VIDEO/0.jpg)]
+    (https://www.youtube.com/watch?v=ID_VIDEO "Titre")
+
+Résultat :
+
+[![](http://img.youtube.com/vi/o77MzDQT1cg/0.jpg)](https://www.youtube.com/watch?v=o77MzDQT1cg "Super vidéo de Hytale")
+
+---
 
 ## Listes
 
-Vous pouvez utiliser le `-`, le `+` ou l'`*`. L'utilisation et le résultat sera le même pour tous.
+### Liste non ordonnée
 
-```
-- Item 1
-  - Item 1.1
-    - Item 1.1.1
-- Item 2
-  + Item 2.1
-    * Item 2.1.1
-```
+Syntaxe :
 
-> Il ne faut pas oublier de faire `2 espaces` avant chaque ligne pour définir un `sous item`
+    - Item 1
+      - Item 1.1
+        - Item 1.1.1
+    - Item 2
 
 Résultat :
 
@@ -64,43 +164,164 @@ Résultat :
   - Item 1.1
     - Item 1.1.1
 - Item 2
-  + Item 2.1
-    * Item 2.1.1
 
-## Spoiler texte
+> Deux espaces sont nécessaires pour chaque sous-niveau
 
-```
+---
+
+### Liste ordonnée
+
+Syntaxe :
+
+    1. Premier
+    2. Deuxième
+    3. Troisième
+
+Résultat :
+
+1. Premier
+2. Deuxième
+3. Troisième
+
+---
+
+### Liste de tâches
+
+Syntaxe :
+
+    - [x] Tâche terminée
+    - [ ] Tâche à faire
+
+Résultat :
+
+- [x] Tâche terminée
+- [ ] Tâche à faire
+
+---
+
+## Code
+
+### Code en ligne
+
+Syntaxe :
+
+    Voici du `code inline`
+
+Résultat :
+
+Voici du `code inline`
+
+---
+
+### Bloc de code
+
+Syntaxe :
+
+        function hello() {
+          console.log("Hello World");
+        }
+
+Résultat :
+
+    function hello() {
+      console.log("Hello World");
+    }
+
+---
+
+## Spoiler / Contenu repliable
+
+Syntaxe :
+
+    <details>
+      <summary>Titre</summary>
+
+      Contenu caché
+    </details>
+
+Résultat :
+
 <details>
   <summary>Titre</summary>
-  
-  Contenu...
-</details>
-```
 
-Résultat : 
-
-<details>
-  <summary>Titre</summary>
-  
-  Contenu...
+  Contenu caché
 </details>
+
+---
 
 ## Tableaux
 
-```
-| Nom | Valeur |
-| - | - |
-| Nom1 | Valeur1 |
-| Nom2 | Valeur2 |
-```
-Résultat : 
-| Nom | Valeur |
-| - | - |
+Syntaxe :
+
+    | Nom  | Valeur  |
+    | ---- | ------- |
+    | Nom1 | Valeur1 |
+    | Nom2 | Valeur2 |
+
+Résultat :
+
+| Nom  | Valeur  |
+| ---- | ------- |
 | Nom1 | Valeur1 |
 | Nom2 | Valeur2 |
 
 ---
 
-[étapes]: <https://github.com/Trenacia/-Get-an-image-link/blob/master/README.md>
-[Markdown]: <https://guides.github.com/features/mastering-markdown/>
-[embed youtube]: <http://embedyoutube.org/>
+## Ligne de séparation
+
+Syntaxe :
+
+    ---
+
+Résultat :
+
+---
+
+---
+
+## Échappement de caractères
+
+Syntaxe :
+
+    \*Texte non interprété\*
+
+Résultat :
+
+\*Texte non interprété\*
+
+---
+
+## HTML dans Markdown
+
+Syntaxe :
+
+    <p style="color:red;">Texte rouge</p>
+
+Résultat :
+
+<p style="color:red;">Texte rouge</p>
+
+---
+
+## Notes de bas de page
+
+Syntaxe :
+
+    Texte avec une note[^1]
+
+    [^1]: Contenu de la note
+
+Résultat :
+
+Texte avec une note[^1]
+
+[^1]: Contenu de la note
+
+---
+
+## Liens de référence
+
+    [Markdown]: https://guides.github.com/features/mastering-markdown/
+    [embed youtube]: http://embedyoutube.org/
+
+---

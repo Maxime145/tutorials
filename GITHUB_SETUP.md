@@ -8,10 +8,10 @@ Trois fichiers ont été créés dans `.github/` :
 
 ```
 .github/
-├── workflows/
-│   ├── lint.yml           # Vérifie ESLint et Prettier
-│   └── test.yml           # Lance les tests et l'audit de sécurité
-└── dependabot.yml         # Config Dependabot
+|-- workflows/
+|   |-- lint.yml           # Vérifie ESLint et Prettier
+│   |-- test.yml           # Lance les tests et l'audit de sécurité
+|-- dependabot.yml         # Config Dependabot
 ```
 
 ## Étape 1 : Activer la protection de branche (IMPORTANT)
@@ -227,3 +227,4 @@ npm audit
 - [Dependabot Documentation](https://docs.github.com/en/code-security/dependabot)
 
 **Votre monorepo est maintenant protégé par CI/CD !**
+
